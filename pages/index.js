@@ -51,10 +51,11 @@ export default function Home({ articles }) {
               </div>
               <div className='col-md-6'>
                 <TextField
-                  label="Details"
-                  id="outlined-size-small"
+                  id="outlined-textarea"
                   variant="outlined"
-                  defaultValue=""
+                  label="Details"
+                  placeholder="Details"
+                  multiline
                   size="small"
                   name='details'
                   onChange={onChangeHandler}
