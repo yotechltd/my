@@ -6,13 +6,27 @@ import { useState } from 'react';
 export default function Home({ articles }) {
   let [cost, setCost] = useState(0);
   let [details, setDetails] = useState("");
+  let [isValid, setIsValid] = useState(true);
   const onChangeHandler = (event)=>{
     event.preventDefault();
-    event.target.name == "cost" ? setCost(+event.target.value) : setDetails(event.target.value);
+    if(event.target.name == "cost") {
+      setCost(+event.target.value);
+      isValidate("cost", +event.target.value);
+    } else {
+      setDetails(event.target.value);
+      isValidate("details", +event.target.value);
+    }
   }
   const onSave = (event)=> {
     event.preventDefault();
     console.log("You submitted cost ",cost , "And details ", details )
+  }
+  const isValidate = (target, value) => {
+    if(target=="cost"){
+      return setIsValid(!(value > 0 && details != ""));
+    }else{
+      return setIsValid(!(cost > 0 && value != ""));
+    }    
   }
   return (
     <div className='row d-flex' className={classes.backg}>
@@ -50,7 +64,8 @@ export default function Home({ articles }) {
               </div>
             </div>
             <div className='row' >
-              <div className={classes.button_center}><Button variant="contained" size="small" onClick={onSave}>Submit</Button></div>
+              <div className={classes.button_center}>
+                <Button disabled={isValid} variant="contained" size="small" onClick={onSave}>Submit</Button></div>
             </div>
           </div>
           <div className="col-md-3 pb_20px" >
