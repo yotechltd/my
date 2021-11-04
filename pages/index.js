@@ -47,6 +47,7 @@ export default function Home({ articles }) {
                   onChange={onChangeHandler}
                   value = {cost}
                   fullWidth
+                  id="margin-none"
                 />
               </div>
               <div className='col-md-6'>
@@ -61,6 +62,7 @@ export default function Home({ articles }) {
                   onChange={onChangeHandler}
                   value={details}
                   fullWidth
+                  id="margin-none"
                 />
               </div>
             </div>
