@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.pt_20px{
+  padding-top: 20px;
+}
+
+.pb_20px{
+  padding-bottom: 20px;
+}

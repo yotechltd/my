@@ -15,31 +15,49 @@ export default function Home({ articles }) {
     console.log("You submitted cost ",cost , "And details ", details )
   }
   return (
-    <div className='container d-flex' >
-      <Box>
-        <TextField
-          label="Size"
-          id="outlined-size-small"
-          variant="outlined"
-          size="small"
-          name='cost'
-          onChange={onChangeHandler}
-          value = {cost}
-        />
-        <TextField
-          label="Size"
-          id="outlined-size-small"
-          variant="outlined"
-          defaultValue=""
-          size="small"
-          name='details'
-          onChange={onChangeHandler}
-          value={details}
-        />
-      </Box>
-      <Button variant="contained" size="small" onClick={onSave}>Submit</Button>
-      
-      {/* <ArticleList articles={articles} /> */}
+    <div className='row d-flex' className={classes.backg}>
+      <div className="container">
+        <div className="row pt_20px">
+          <div className="col-md-3 pb_20px" >
+            Add area
+          </div>
+          <div className="col-md-6 pb_20px">
+            <div className='row pb_20px'> 
+              <div className='col-md-6 pb_20px'>
+                <TextField
+                  label="Cost"
+                  id="outlined-size-small"
+                  variant="outlined"
+                  size="small"
+                  name='cost'
+                  onChange={onChangeHandler}
+                  value = {cost}
+                  fullWidth
+                />
+              </div>
+              <div className='col-md-6'>
+                <TextField
+                  label="Details"
+                  id="outlined-size-small"
+                  variant="outlined"
+                  defaultValue=""
+                  size="small"
+                  name='details'
+                  onChange={onChangeHandler}
+                  value={details}
+                  fullWidth
+                />
+              </div>
+            </div>
+            <div className='row' >
+              <div className={classes.button_center}><Button variant="contained" size="small" onClick={onSave}>Submit</Button></div>
+            </div>
+          </div>
+          <div className="col-md-3 pb_20px" >
+            add area
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
