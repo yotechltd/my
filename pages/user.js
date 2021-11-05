@@ -16,6 +16,7 @@ const User = ()=>{
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState({});
   const [amount, setAmount] = useState();
+  const [modalField, setModalField] = useState('');
   // let user = useState([
   //   {
   //         "userId": 1,
@@ -63,7 +64,9 @@ const User = ()=>{
   }
   const addMoney = async(params) => {
     await setSelected(params.row);
-    console.log(selected);
+    await setModalField(params.field);
+    
+    console.log(modalField);
     handleClickOpen();
   }
   const onSaveValue = async(event) => {
@@ -114,7 +117,7 @@ const User = ()=>{
       renderCell: (params) => {
         return (
           <>
-            <Button variant="contained" onClick={onPressEditButton} startIcon={<AddOutlined />}>
+            <Button variant="contained" onClick={()=>{addMoney(params)}} startIcon={<AddOutlined />}>
               {params.row[params.field]}
             </Button>
           </>
@@ -178,9 +181,17 @@ const User = ()=>{
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{ `Deposite money to ${selected ? selected.name: "None"}?`}</DialogTitle>
+        <DialogTitle>{ `${modalField == "deposite" ? 'Deposite money' : 'Add meals' } to ${selected ? selected.name: "None"}?`}</DialogTitle>
         <DialogContent>
-          <TextField id="standard-basic" value={amount} onChange={depositeChanger} label="Standard" variant="standard" />
+        <DialogContentText id="alert-dialog-slide-description">
+          {
+            modalField == "deposite" ? `Deposite Amount ${selected? selected.deposite : 0}` : `Total meal ${selected? selected.count : 0}`
+          }
+        </DialogContentText>
+          {
+            modalField == "deposite" ? <TextField id="standard-basic" value={amount} onChange={depositeChanger} label="Deposite" variant="standard" /> : 
+            <TextField id="standard-basic" value={amount} onChange={depositeChanger} label="Meal" variant="standard" />
+          }
           {/* <DialogContentText id="alert-dialog-slide-description">
             Let Google help apps determine location. This means sending anonymous
             location data to Google, even when no apps are running.
@@ -188,7 +199,7 @@ const User = ()=>{
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancle</Button>
-          <Button onClick={onSaveValue}>Save</Button>
+          <Button onClick={()=>{onSaveValue(event)}}>Save</Button>
         </DialogActions>
       </Dialog>
     </div>
