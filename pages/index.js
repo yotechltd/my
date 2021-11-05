@@ -68,7 +68,7 @@ export default function Home({ articles }) {
             </div>
             <div className='row' >
               <div className={classes.button_center}>
-                <Button disabled={isValid} variant="contained" size="small" onClick={onSave}>Submit</Button></div>
+                <Button disabled={isValid} color="primary" variant="contained" size="small" onClick={onSave}>Submit</Button></div>
             </div>
           </div>
           <div className="col-md-3 pb_20px" >

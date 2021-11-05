@@ -14,6 +14,9 @@ const Nav = () => {
         <li>
           <Link href='/groupcost'>Group Cost</Link>
         </li>
+        <li>
+          <Link href='/user'> User </Link>
+        </li>
       </ul>
     </nav>
   )
