@@ -1,14 +1,20 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Grid, Paper, Slide, styled, TextField } from "@material-ui/core";
 import { DataGrid, GridApi,GridCellParams } from "@material-ui/data-grid";
 import { Add, AddOutlined, AmpStoriesOutlined, EditOutlined } from "@material-ui/icons";
+import { SnackbarProvider, useSnackbar } from "notistack";
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import toastr from "toastr";
+import Meta from "../components/Meta";
 import classes from "../styles/About.module.css"
+import 'react-toastify/dist/ReactToastify.css';
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
+
 const User = ()=>{
   const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -54,7 +60,14 @@ const User = ()=>{
     }
   ]);
   const onPressEditButton=(event)=>{
-    console.log(event);
+    event.preventDefault();
+    console.log("success");
+    toast.success("And of course a component of your choice");
+    toast.success("Display a light notification ", { theme: "light" });
+    toast.success("Display a dark notification ", { theme: "dark" });
+    toast.success("Display a blue colored", { theme: "colored" });
+    toastr.success('Have fun storming the castle!', 'Miracle')
+    //handleClickVariant('success')
   }
   function currentlySelected(params) {
     const api = params.api;
@@ -80,8 +93,15 @@ const User = ()=>{
 
     value.splice(index, 1, updateObj);
     await setUser(value);
+    
     handleClose();
   }
+
+  const handleClickVariant = (variant) => {
+    // variant could be success, error, warning, info, or default
+    console.log(variant);
+    //snackBar.enqueueSnackbar('This is a success message!', { variant });
+  };
   const depositeChanger = (event)=>{
     event.preventDefault();
     setAmount(+event.target.value);
@@ -132,7 +152,7 @@ const User = ()=>{
       disableClickEventBubbling: true,
       renderCell: () => {
         return (
-          <Button variant="contained" onClick={onPressEditButton} color="primary" startIcon={<EditOutlined />}>
+          <Button variant="contained" onClick={()=>{onPressEditButton(event)}} color="primary" startIcon={<EditOutlined />}>
             Edit
           </Button>
         );
@@ -140,6 +160,8 @@ const User = ()=>{
     }
   ]
   return (
+    
+      
     // <div className='row d-flex' >
     //   <div className="container">
     //     <div className="row pt_20px">
@@ -153,6 +175,7 @@ const User = ()=>{
     //   </div>
     // </div>
     <div className="row d-flex" className={classes.backg}>
+      <Meta title="main" />
       <div className="container">
         <div className="row">
           <div className="col-md-2">
@@ -202,6 +225,7 @@ const User = ()=>{
           <Button onClick={()=>{onSaveValue(event)}}>Save</Button>
         </DialogActions>
       </Dialog>
+      <ToastContainer/>
     </div>
   )
 }

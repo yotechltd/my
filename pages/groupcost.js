@@ -91,7 +91,7 @@ export default function GroupCost() {
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   )
 }
 
