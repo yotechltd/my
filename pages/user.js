@@ -86,14 +86,13 @@ const User = ()=>{
     event.preventDefault();
     let value = [...user];
     let index = value.findIndex(v=> v.id == selected.id);
-    await setAmount(amount);
-    let addition = selected.deposite + amount;
+    let addition = selected[modalField] + amount;
     let updateObj = {...selected};
-    updateObj["deposite"] = addition;
+    updateObj[modalField] = addition;
 
     value.splice(index, 1, updateObj);
     await setUser(value);
-    
+    setAmount(0);
     handleClose();
   }
 
@@ -104,7 +103,7 @@ const User = ()=>{
   };
   const depositeChanger = (event)=>{
     event.preventDefault();
-    setAmount(+event.target.value);
+    setAmount(Number(event.target.value));
   }
   const handleClickOpen = () => {
     setOpen(true);
