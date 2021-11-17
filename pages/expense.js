@@ -4,6 +4,7 @@ const classes = import("../styles/Expense.module.css");
 import DateAdapter from '@mui/lab/AdapterMoment';
 import { TextField } from "@material-ui/core";
 import moment from "moment";
+
 const Expense = () => {
   const [value, setValue] = useState(new Date());
   function disableDate(day) {
@@ -24,6 +25,11 @@ const Expense = () => {
           renderInput={(params) => <TextField {...params} />}
         />
       </LocalizationProvider>
+      <button className="button-1">click me</button>
+      <button className="button-2">click me</button>
+      <button className="button-3">click me</button>
+      <button className="button-4">click me</button>
+      <button className="button-err">click me</button>
     </>
   );
 };

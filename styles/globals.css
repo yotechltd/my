@@ -26,3 +26,81 @@ a {
 .pr-20px{
   padding-right: 20px;
 }
+
+.button-1{
+  background-color: #5278BD;
+  border-radius: 4px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.75;
+  opacity: .9;
+  
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+.button-1:hover{
+  background-color: #5278BD;
+  border-radius: 4px;
+  opacity: 1;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.75;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.button-2{
+  border: 1px solid #5278BD;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+.button-3{
+  border: 1px solid #5278BD;
+  background-color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.button-4{
+  border: none;
+  background-color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.button-err{
+  border: 1px solid #5278BD;
+  background-color: #f0c483;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
