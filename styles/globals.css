@@ -31,7 +31,7 @@ a {
   background-color: #5278BD;
   border-radius: 4px;
   font-weight: 500;
-  color: rgb(255, 255, 255);
+  color: #eee;
   border: none;
   padding: 4px 10px !important;
   font-size: 0.8125rem;
@@ -39,22 +39,22 @@ a {
   text-transform: uppercase;
   line-height: 1.75;
   opacity: .9;
-  
+  transition: opacity 250ms, background-color 250ms;
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 }
 .button-1:hover{
-  background-color: #5278BD;
+  background-color: #3a5b97;
   border-radius: 4px;
   opacity: 1;
   font-weight: 500;
-  color: rgb(255, 255, 255);
+  color: #eee;
   border: none;
   padding: 4px 10px !important;
   font-size: 0.8125rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
   line-height: 1.75;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 250ms, background-color 250ms;
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 }
 
@@ -73,11 +73,26 @@ a {
   border: 1px solid #5278BD;
   background-color: #eeeeee;
   text-transform: uppercase;
+  color: #5278BD;
   font-weight: 500;
   border-radius: 4px;
   padding: 4px 10px !important;
   font-size: 0.8125rem;
   line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.button-3:hover{
+  border: 1px solid #5278BD;
+  background-color: #5278BD;
+  color: #eee;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  transition: background-color 500ms, color 250ms, border 250ms;
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 }
 
@@ -92,7 +107,44 @@ a {
   line-height: 1.75;
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 }
+.button-4:hover{
+  border: none;
+  background-color: #5278BD;
+  color: #eee;
+  transition: color 250ms, background-color 250ms;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
 
+.button-5{
+  border: none;
+  background-color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+.button-5:hover{
+  border: none;
+  background-color: rgb(214, 214, 214);
+  transition: color 250ms, background-color 250ms;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  transition: 500ms;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
 .button-err{
   border: 1px solid #5278BD;
   background-color: #f0c483;
@@ -104,3 +156,42 @@ a {
   line-height: 1.75;
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 }
+
+.button-err:hover{
+  border: 1px solid #FF9400;
+  background-color: #FF9400;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  color: #eee;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  transition: 500ms;
+}
+
+.button-err-1{
+  border: none;
+  background-color: #f0c483;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.button-err-1:hover{
+  border: none;
+  background-color: #FF9400;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #eee;
+  border-radius: 4px;
+  padding: 4px 10px !important;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  transition: 500ms;
+}
+

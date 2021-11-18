@@ -25,11 +25,19 @@ const Expense = () => {
           renderInput={(params) => <TextField {...params} />}
         />
       </LocalizationProvider>
-      <button className="button-1">click me</button>
-      <button className="button-2">click me</button>
-      <button className="button-3">click me</button>
-      <button className="button-4">click me</button>
-      <button className="button-err">click me</button>
+      <div>
+        <button className="button-1">click me</button>
+        <button className="button-2">click me</button>
+        <button className="button-3">click me</button>
+        <button className="button-4">click me</button>
+        <button className="button-5">submit</button>
+        <button className="button-err">click me</button>
+        <button className="button-err-1">delete</button>
+      </div>
+      <div>
+        <input type='text' className="form-field" placeholder="Name"></input>
+        <input type='number' className="form-field" placeholder="Name"></input>
+      </div>
     </>
   );
 };
