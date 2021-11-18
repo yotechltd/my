@@ -194,4 +194,24 @@ a {
   line-height: 1.75;
   transition: 500ms;
 }
-
+/* 
+input[type=text] {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+input[type=text]:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px #91d5ff;
+} */
+.form-field{
+  border: 1px solid #5278BD;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.form-field:focus{
+  outline: none;
+  border: 1px solid #3a5b97;
+  transition: 500ms;
+  box-shadow: 0 0 0 0px #3a5b97;
+}
