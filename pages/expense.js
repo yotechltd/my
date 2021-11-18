@@ -35,7 +35,19 @@ const Expense = () => {
         <button className="button-err-1">delete</button>
       </div>
       <div>
-        <input type='text' className="form-field" placeholder="Name"></input>
+        <div class="dropdown">
+          <input type='text' className="form-field dropbtn" placeholder="Name"></input>
+          <div class="dropdown-content">
+            <div className="cursor">
+              <div className="cursor-arrow"></div>
+            </div>
+            <div className="main">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
         <input type='number' className="form-field" placeholder="Name"></input>
       </div>
     </>
